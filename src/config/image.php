@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
 
     /*
@@ -38,5 +40,5 @@ return [
         'autoOrientation' => true,
         'decodeAnimation' => true,
         'blendingColor' => 'ffffff',
-    ]
+    ],
 ];
