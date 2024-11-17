@@ -29,6 +29,11 @@ class PlaceholderImageRequest extends FormRequest
             $this->merge([$modifier => $this->has($modifier)]);
         }
 
+        // Add default blur value in case no value has been specified
+        if ($this->has('blur') && $this->input('blur') === null) {
+            $this->merge(['blur' => 15]);
+        }
+
         if (! $this->has('height')) {
             $this->merge(['height' => $this->input('width')]);
         }
