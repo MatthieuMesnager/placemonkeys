@@ -1,0 +1,39 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      github-actions-deps:
+        patterns:
+          - '*'
+    labels:
+      - actions
+      - dependencies
+
+  - package-ecosystem: npm
+    directory: /src
+    schedule:
+      interval: monthly
+    groups:
+      npm-deps:
+        dependency-type: production
+      npm-deps-dev:
+        dependency-type: development
+    labels:
+      - npm
+      - dependencies
+
+  - package-ecosystem: composer
+    directory: /src
+    schedule:
+      interval: monthly
+    groups:
+      composer-deps:
+        dependency-type: production
+      composer-deps-dev:
+        dependency-type: development
+    labels:
+      - composer
+      - dependencies
