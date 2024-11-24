@@ -1,5 +1,9 @@
 # Placemonkeys
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/MatthieuMesnager/placemonkeys/tests)
+![GitHub Release](https://img.shields.io/github/v/release/MatthieuMesnager/placemonkeys)
+![GitHub License](https://img.shields.io/github/license/MatthieuMesnager/placemonkeys)
+
 A quick and simple service for getting pictures of monkeys for use as placeholders.
 
 ## API
