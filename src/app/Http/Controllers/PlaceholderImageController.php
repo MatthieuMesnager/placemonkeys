@@ -52,7 +52,7 @@ final class PlaceholderImageController
          * Retrieve images
          */
         $availableImages = new Collection(Storage::disk('local')->allFiles('images'));
-        $randomlyPickedImageFilePath = $availableImages->random(1)->first();
+        $randomlyPickedImageFilePath = $availableImages->random();
 
         /**
          * Create image object
