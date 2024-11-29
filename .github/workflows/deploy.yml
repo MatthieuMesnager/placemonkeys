@@ -94,4 +94,5 @@ jobs:
         run: |
           rsync -avzc --delete -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" \
             --exclude='node_modules' \
+            --exclude='storage' \
             ./src/ ${{ secrets.SSH_REMOTE_USER }}@${{ secrets.SSH_REMOTE_HOST }}:${{ vars.REMOTE_WORKDIR }}
