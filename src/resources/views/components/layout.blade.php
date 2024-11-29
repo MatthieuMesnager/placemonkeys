@@ -119,12 +119,6 @@
                             href="https://unsplash.com"
                             title="Unsplash"
                             target="_blank"
-                <x-footer.item>
-                    <span>View</span>
-                    <x-slot:link>
-                        <x-footer.link
-                            href="{{ route('page.credits') }}"
-                            title="credits"
                         />
                     </x-slot>
                 </x-footer.item>
