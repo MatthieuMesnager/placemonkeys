@@ -57,7 +57,6 @@
         <meta name="twitter:image" content="{{ url("/250") }}" />
 
         <link rel="canonical" href="{{ url()->current() }}" />
-        <link rel="stylesheet" href="{{ asset("css/app.css") }}" />
 
         <!-- Styles & Scripts -->
         @vite(["resources/css/app.css", "resources/js/app.js"])
