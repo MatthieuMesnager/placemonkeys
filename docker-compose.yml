@@ -33,6 +33,7 @@ services:
       - ./src:/var/www/html:delegated
     depends_on:
       - pgsql
+      - redis
       - mailpit
     healthcheck:
       test: ["CMD", "php-fpm", "-t"]
@@ -71,6 +72,19 @@ services:
       timeout: 5s
     networks:
       - laravel
+  redis:
+    image: 'redis:alpine'
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis:/data
+    networks:
+      - laravel
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      retries: 3
+      timeout: 5s
   npm:
     image: "node:22-alpine"
     ports:
@@ -94,4 +108,6 @@ services:
 
 volumes:
   pgsql:
+    driver: local
+  redis:
     driver: local
