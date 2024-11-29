@@ -16,6 +16,11 @@ parameters:
 			path: config/database.php
 
 		-
+			message: "#^Parameter \\#2 \\$string of function explode expects string, bool\\|string given\\.$#"
+			count: 1
+			path: config/logging.php
+
+		-
 			message: "#^Parameter \\#1 \\$url of function parse_url expects string, bool\\|string given\\.$#"
 			count: 1
 			path: config/mail.php
@@ -24,3 +29,8 @@ parameters:
 			message: "#^Parameter \\#1 \\$title of static method Illuminate\\\\Support\\\\Str\\:\\:slug\\(\\) expects string, bool\\|string given\\.$#"
 			count: 1
 			path: config/session.php
+
+		-
+			message: "#^Undefined variable\\: \\$this$#"
+			count: 1
+			path: routes/console.php
