@@ -1,8 +1,0 @@
-.idea/
-.git/
-node_modules/
-vendor/
-public/
-package-lock.json
-composer.lock
-.env*=
