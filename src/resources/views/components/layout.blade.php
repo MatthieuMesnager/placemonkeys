@@ -62,7 +62,9 @@
         <!-- Styles & Scripts -->
         @vite(["resources/css/app.css", "resources/js/app.js"])
     </head>
-    <body class="font-sans bg-white text-black dark:bg-zinc-950 dark:text-zinc-100">
+    <body
+        class="bg-white font-sans text-black dark:bg-zinc-950 dark:text-zinc-100"
+    >
         <header>
             <div class="flex flex-row items-center justify-end pr-4 pt-4">
                 <x-theme-switcher />
@@ -95,6 +97,7 @@
                             href="https://github.com/MatthieuMesnager"
                             title="Matthieu Mesnager"
                             target="_blank"
+                            rel="noopener noreferrer"
                         />
                     </x-slot>
                 </x-footer.item>
@@ -105,6 +108,7 @@
                             href="https://picsum.photos"
                             title="Lorem Picsum"
                             target="_blank"
+                            rel="noopener noreferrer"
                         />
                     </x-slot>
                 </x-footer.item>
@@ -119,6 +123,10 @@
                             href="https://unsplash.com"
                             title="Unsplash"
                             target="_blank"
+                            rel="noopener noreferrer"
+                        />
+                    </x-slot>
+                </x-footer.item>
                 <x-footer.item>
                     <span>View</span>
                     <x-slot:link>
