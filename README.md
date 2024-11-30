@@ -1,6 +1,6 @@
 # Placemonkeys
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/MatthieuMesnager/placemonkeys/tests)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/MatthieuMesnager/placemonkeys/tests.yml)
 ![GitHub Release](https://img.shields.io/github/v/release/MatthieuMesnager/placemonkeys)
 ![GitHub License](https://img.shields.io/github/license/MatthieuMesnager/placemonkeys)
 
