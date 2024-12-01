@@ -17,10 +17,24 @@ updates:
     schedule:
       interval: monthly
     groups:
-      npm-deps:
+      npm-deps-major:
         dependency-type: production
-      npm-deps-dev:
+        update-types:
+          - major
+      npm-deps-minor-and-patches:
+        dependency-type: production
+        update-types:
+          - minor
+          - patch
+      npm-deps-dev-major:
         dependency-type: development
+        update-types:
+          - major
+      npm-deps-dev-minor-and-patches:
+        dependency-type: development
+        update-types:
+          - minor
+          - patch
     labels:
       - npm
       - dependencies
@@ -30,10 +44,24 @@ updates:
     schedule:
       interval: monthly
     groups:
-      composer-deps:
+      composer-deps-major:
         dependency-type: production
-      composer-deps-dev:
+        update-types:
+          - major
+      composer-deps-minor-and-patches:
+        dependency-type: production
+        update-types:
+          - minor
+          - patch
+      composer-deps-dev-major:
         dependency-type: development
+        update-types:
+          - major
+      composer-deps-dev-minor-and-patches:
+        dependency-type: development
+        update-types:
+          - minor
+          - patch
     labels:
       - composer
       - dependencies
