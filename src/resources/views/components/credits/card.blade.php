@@ -3,11 +3,11 @@
 ])
 
 <figure
-    class="group overflow-hidden rounded-sm text-black shadow-lg transition-shadow duration-100 dark:text-zinc-100"
+    class="group overflow-hidden rounded-xs text-black shadow-lg transition-shadow duration-100 dark:text-zinc-100"
 >
     <div class="overflow-hidden">
         <img
-            class="aspect-[4/3] h-full w-full object-cover transition-transform duration-150 group-hover:scale-110"
+            class="aspect-4/3 h-full w-full object-cover transition-transform duration-150 group-hover:scale-110"
             src="{{ $credit["imageData"] }}"
             alt="{{ $credit["links"]["image"] }}"
         />

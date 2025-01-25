@@ -1,5 +1,5 @@
 <div
-    {{ $attributes->class(["mt-4 w-full rounded p-2"]) }}
+    {{ $attributes->class(["mt-4 w-full rounded-sm p-2"]) }}
 >
     <code
         class="select-all break-words text-sm text-blue-800 underline dark:text-blue-400"
