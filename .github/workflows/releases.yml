@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Remove optional "v" prefix
         id: version
@@ -57,7 +57,7 @@ jobs:
             core.setFailed('Workflow failed. Release version does not match with selected target branch. Did you select the correct branch?')
 
       - name: Commit version change
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "Update version to v${{ steps.version.outputs.version }}"
 
