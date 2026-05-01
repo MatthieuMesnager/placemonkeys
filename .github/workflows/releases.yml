@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Remove optional "v" prefix
         id: version
@@ -51,18 +51,18 @@ jobs:
 
       - name: Fail if branch and release tag do not match
         if: ${{ steps.guard.outputs.VERSION_MISMATCH == 'true' }}
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             core.setFailed('Workflow failed. Release version does not match with selected target branch. Did you select the correct branch?')
 
       - name: Commit version change
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "Update version to v${{ steps.version.outputs.version }}"
 
       - name: Create release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         env:
           GITHUB_TOKEN: ${{ secrets.PRIVATE_GITHUB_TOKEN }}
         with:
